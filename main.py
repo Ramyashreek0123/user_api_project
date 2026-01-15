@@ -1,17 +1,9 @@
 from fastapi import FastAPI
-import pymysql
 import requests
+from database import get_connection
 
 app = FastAPI()
 
-
-def get_connection():
-    return pymysql.connect(
-        host="localhost",
-        user="root",
-        password="root123",   
-        database="user_management"
-    )
 
 
 @app.get("/")

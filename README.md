@@ -16,9 +16,11 @@ user_api_project/
 
 ---
 
+---
+
 ## Setup Instructions
 
-1. Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/<your-username>/user_api_project.git
@@ -57,14 +59,24 @@ Swagger UI (for testing endpoints): http://127.0.0.1:8080/docs
 
 API Endpoints
 
-GET / → Check if API is running
+| Method | Endpoint                | Description                             |
+| ------ | ----------------------- | --------------------------------------- |
+| GET    | `/`                     | Check if API is running                 |
+| POST   | `/add-user`             | Add a new user                          |
+| GET    | `/get-users`            | Fetch all users from database           |
+| GET    | `/fetch-external-users` | Fetch and store users from external API |
 
-POST /add-user → Add a user
 
-GET /get-users → Fetch all users from DB
+## Environment Variables
 
-GET /fetch-external-users → Fetch and store users from external API
+Create a `.env` file with:
 
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=user_management
+
+Note: `.env` is ignored in GitHub.
 
 ---
 ```
