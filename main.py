@@ -4,6 +4,14 @@ from database import get_connection
 
 app = FastAPI()
 
+def get_connection():
+    return pymysql.connect(
+        host="localhost",
+        user="",
+        password="",   
+        database="user_management"
+    )
+
 
 
 @app.get("/")
